@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Box Model</title>
+	<style>
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR|ZCOOL+QingKe+HuangYou');
+        * {
+	        margin:0;
+	        padding:0;
+	        color:#000;
+	        font-family: 'ZCOOL QingKe HuangYou';
+	        box-sizing: border-box;
+        }
+        
+        .fn-font{
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            outline: none;
+        }
+
+        .container{
+            width: 720px;
+            margin: auto;
+        }
+        
+        header{
+            width: 100%
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header > h2{
+            margin-left: 20px;
+            float: left;
+        }
+
+        header > nav {
+            width: 600px;
+            height: 100%;
+        }
+
+        header ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header ul > li {
+            font-size: 20px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+
+        logo{
+            width: 100px;
+            height: 150px;
+            text-align: center;
+            float: left;
+        }
+        #searchbar{
+            height: 40px;
+            width: 400px;
+            border: 1px solid grey;
+            background: #ffffff;
+            margin: auto;
+        }
+        #searchinput{
+            font-size: 16px;
+            width: 325px;
+            padding: 10px;
+            border: 0px;
+            outline: none;
+            float: left;
+        }
+        button{
+            width: 50px;
+            height: 100%;
+            border: 0px;
+            background: grey;
+            outline: none;
+            float: right;
+            color: #ffffff;
+        }
+        #but{
+            width: 50px;
+            height: 100%;
+            border: 0px;
+            background: grey;
+            outline: none;
+            float: right;
+            color: #ffffff;
+            font-size: 12px;
+            text-align: center;
+        }
+      a:link{color:black;}
+      a:visited{color: black; text-decoration: none}
+      a:hover{color: #7c7365}
+      
+        #blank{
+            width: 300px;
+        }
+        #blank2{
+            height: 30px;
+        }
+        #blank3{
+            height: 10px;
+        }
+        table{
+            margin: auto;
+            width: 700px;
+            border: 2px solid grey;
+            border-collapse: collapse;
+        }
+        td, th{
+            height: 30px;
+            border: 1px solid grey;
+        }
+        .tableright{
+            text-align: right;
+        }
+        .tablecenter{
+            text-align: center;
+        }
+        #datetodate{
+            float: left;
+            width: 150px;
+            margin: 2px;
+            box-sizing: border-box;
+        }
+        #dateinput{
+            display: inline;
+            margin: 10px;
+            margin-left: -2px;
+        }
+        
+	</style>
+</head>
+
+<body>
+    <div class="container">
+        
+        <div>
+            <header>
+            <h2><image src="http://testhtml.dothome.co.kr/Ggonara/G%EA%B3%A0%EB%82%98%EB%9D%BC_%EB%A1%9C%EA%B3%A0.png" 
+                style="width: 80px; height:70px padding:10px; margin: 10px;"></h2>
+            <div id="blank"></div>
+                <nav>
+                <ul>
+                    <li><a href="">main</a></li>
+                    <li style="font-size:14px;"><a href="">리뷰페이지</a></li>
+                    <li><a href="">My page</a></li>
+                </ul>
+            </nav>
+        </header>
+        <tr>
+        </tr>
+    </div>
+    <div id="searchbar">
+        <input id="searchinput" type="search" placeholder="검색어 입력">
+        <button>검색</button>
+        
+        <form style="float:left">
+            <input id="dateinput" type="date" name="fromDate" id="datetodate" style="display:inline">
+            <div id="dateinput">~</div>
+            <input id="dateinput" type="date" name="toDate" id="datetodate" style="display:inline">
+        </form>  
+    </div>
+    
+    <div id="blank2"></div>
+
+    <table style="clear:both;">
+        <tr>
+            <th colspan="2">제목</th>
+            <th>작성자</th>
+            <th>작성일</th>
+            <th>조회</th>
+            <th>좋아요</th>
+        </tr>
+        <tr>
+            <td class="tablecenter" style="width: 30px;">1</td>
+            <td><a href="#">개봉 에어팟2 싸게 팔아요</a></td>
+            <td class="tableright">20학번앱등이</td>
+            <td class="tablecenter">2021.05.20.</td>
+            <td class="tablecenter">23</td>
+            <td class="tablecenter">2</td>
+        </tr>
+        <tr>
+            <td class="tablecenter">2</td>
+            <td><a href="#">50L 냉장고 급하게 팔아요</a></td>
+            <td class="tableright">이제광주탈출</td>
+            <td class="tablecenter">2021.05.21.</td>
+            <td class="tablecenter">36</td>
+            <td class="tablecenter">4</td>
+        </tr>
+        <tr>
+            <td class="tablecenter">3</td>
+            <td><a href="#">미적분학 교재 팔아요</a>></td>
+            <td class="tableright">아직화석아님</td>
+            <td class="tablecenter">2021.05.22.</td>
+            <td class="tablecenter">14</td>
+            <td class="tablecenter">2</td>
+        </tr>
+        <tr>
+            <td class="tablecenter">4</td>
+            <td><a href="#">(급함)치약 사고 싶어요ㅜㅜ</a></td>
+            <td class="tableright">착한어른이</td>
+            <td class="tablecenter">2021.05.22.</td>
+            <td class="tablecenter">7</td>
+            <td class="tablecenter">0</td>
+        </tr>
+        <tr>
+            <td class="tablecenter">5</td>
+            <td><a href="#">귤 파실 분 있나여?!</a></td>
+            <td class="tableright">딸기오렌지</td>
+            <td class="tablecenter">2021.05.22.</td>
+            <td class="tablecenter">27</td>
+            <td class="tablecenter">1</td>
+        </tr>
+        <tr>
+            <td class="tablecenter">6</td>
+            <td><a href="#">인마행 교재 팝니다~</a></td>
+            <td class="tableright">최더블원</td>
+            <td class="tablecenter">2021.05.23.</td>
+            <td class="tablecenter">19</td>
+            <td class="tablecenter">3</td>
+        </tr>
+        <tr>
+            <td class="tablecenter">7</td>
+            <td><a href="#">콜라 사실 분~(30개있습니다)</a></td>
+            <td class="tableright">펩시실화냐</td>
+            <td class="tablecenter">2021.05.23.</td>
+            <td class="tablecenter">36</td>
+            <td class="tablecenter">9</td>
+        </tr>
+        <tr>
+            <td class="tablecenter">8</td>
+            <td><a href="#">콜라 사실 분~(30개있습니다)</a></td>
+            <td class="tableright">펩시실화냐</td>
+            <td class="tablecenter">2021.05.23.</td>
+            <td class="tablecenter">36</td>
+            <td class="tablecenter">9</td>
+        </tr>
+        <tr>
+            <td class="tablecenter">9</td>
+            <td><a href="#">콜라 사실 분~(30개있습니다)</a></td>
+            <td class="tableright">펩시실화냐</td>
+            <td class="tablecenter">2021.05.23.</td>
+            <td class="tablecenter">36</td>
+            <td class="tablecenter">9</td>
+        </tr>
+        <tr>
+            <td class="tablecenter">10</td>
+            <td><a href="#">콜라 사실 분~(30개있습니다)</a></td>
+            <td class="tableright">펩시실화냐</td>
+            <td class="tablecenter">2021.05.23.</td>
+            <td class="tablecenter">36</td>
+            <td class="tablecenter">9</td>
+        </tr>
+        <tr>
+            <td colspan="6"><a href="#" id="but">글쓰기</a></td>
+        </tr>
+    </table>
+    <div id="blank3"></div>
+    <tr>
+        <td coldspan="6"><center>
+        <a href="#">1</a><a>&ensp;</a>
+        <a href="#">2</a><a>&ensp;</a>
+        <a href="#">3</a><a>&ensp;</a>
+        <a href="#">4</a><a>&ensp;</a>
+        <a href="#">5</a><a>&ensp;</a>
+        <a href="#">다음▶</a>
+        </center></td>
+    </tr>
+    
+    
+    </div>
+
+  	
+</body>
+
+</html>
